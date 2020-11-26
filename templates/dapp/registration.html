@@ -1,0 +1,23 @@
+{% extends "dapp/base.html" %}
+{% load static %}
+{% block body_block %}
+<body background="static\hospital.png" style="background-size: 100%;align-content: center;"></body>
+
+  <div class="container">
+    <div class="jumbotron">
+      {% if registered %}
+        <h1>Thank you for registering!</h1>
+      {% else %}
+        <h2>Register Here</h2>
+        
+<form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+          {{ profile_form.as_p }}
+          <input type="submit" name="" value="Register">
+        </form>
+        
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

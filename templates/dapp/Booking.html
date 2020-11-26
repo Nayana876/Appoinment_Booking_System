@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <body background="static\hospital.png" style="background-size: 100%;align-content: center;"></body> -->
+
+    <style>
+        
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(hospital.png) ;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .booking-box{
+            max-width: 350px;
+            border: 1px solid rgb(12, 3, 3) ;
+            margin: 10% auto 0;
+        }
+        .booking-form{
+            padding: 0 20px 20px;
+        }
+        .booking-form label{
+            margin-bottom: 5px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #fff;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="templates\dapp\style1.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class = "booking-box">
+       <div class="booking-form">
+            <div class="input-group-btn">
+                <label>Doctors</label>
+                <select class="custom-select">
+                    <option value="1">Doctor1</option>
+                    <option value="1">Doctor2</option>
+                    <option value="1">Doctor3</option>
+                </select>
+            </div>
+            <div class="input-group-btn">
+                <label>Specialization</label>
+                <select class="custom-select">
+                    <option value="1">Specialization1</option>
+                    <option value="2">Specialization2</option>
+                    <option value="3">Specialization3</option>
+                </select>
+            </div>
+            <div class="input-grp">
+                <label>Date</label>
+                <input type="date" class="form-control select-date">
+            </div>
+            <div class="input-grp">
+                <label>Time</label>
+                <input type="time" class="form-control select-time">
+            </div>
+            <div class="input-group-btn">
+            <button type="button"class="btn btn-primary" >Book </button>
+
+            </div>
+         </div>
+    </div>
+      
+</body>
+</html>

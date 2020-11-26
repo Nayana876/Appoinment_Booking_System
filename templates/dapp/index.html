@@ -1,0 +1,27 @@
+{% extends "dapp/base.html" %}
+{% block body_block %}
+<body background="static\hospital.png" style="background-size: 100%;align-content: center;"></body>
+
+<div class="container">
+  <div class="jumbotron">
+    <h2>HOSPITAL BOOKING SYSTEM</h2>
+    {% if user.is_authenticated %}
+        <h3>Hello {{ user.username }}</h3>
+        <br></br>
+        <a class="navbar-link-book" href="{% url 'book' %}">Book Appoinment</a> 
+        <style>
+          .navbar-link-book{
+          padding: 10px;
+          text-align: center;
+          background:lightblue;
+          color: black;
+          font-size: 16px;
+          
+        }
+        </style>
+    {% else %}
+        <h2>Login to make bookings</h2>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
